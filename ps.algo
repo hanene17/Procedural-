@@ -1,0 +1,74 @@
+PROCEDURE dot_product(v1: FLOAT, v2:FLOAT)
+VAR
+  v1 : ARRAY_OF INTEGER[3]; 
+
+  v2 : ARRAY_OF INTEGER[3];
+  i: INTEGER;
+  j: INTEGER;
+  ps:FLOAT:=0;
+
+BEGIN
+
+  FOR i FROM 0 TO 2 STEP 1  DO   ;
+  Write(v1[i]) 
+  END_FOR
+  i:=i+1;
+  FOR j FROM 0 TO 2 STEP 1  DO   ;
+  Write(v2[j]) 
+  END_FOR
+  j:=i+1;
+  FOR i FROM 0 TO 2 STEP 1  DO   ;
+  ps:= ps + v1[i] * v2[j]
+  END_FOR
+
+
+  Write(ps)
+END
+
+
+
+
+ALGORITHM n_pairs_of_give_vectors_dot_product
+
+VAR
+   j : INTEGER;
+   arr : ARRAY_OF INTEGER[n];  
+   i : INTEGER; 
+   n : INTEGER; 
+   m: INTEGER; 
+   ps:FLOAT;
+   isPairFound: BOOLEAN := true;  
+BEGIN
+ // Nested loop for all possible pairs
+  FOR i FROM 0 TO i < n STEP 1
+  DO;
+  i:=i+1
+  FOR j FROM 0 TO  j < n STEP 1
+  DO;
+  j:=j+1
+ 
+  IF (i <> j and arr[i] % arr[j] == m and ps<arr[i], arr[j]> == 0 ) THEN
+
+  Write(arr[i]) ;
+  Write(arr[j]) ;
+
+  isPairFound:=true;
+  Write(isPairFound);
+  END_IF
+  END_FOR
+  END_FOR
+
+  dot_product(isPairFound)
+  Write(isPairFound);
+
+END
+
+
+
+
+
+
+
+
+
+

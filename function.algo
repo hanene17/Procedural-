@@ -1,0 +1,46 @@
+FUNCTION dot_product(v1,v2):float
+
+VAR
+   v1 : ARRAY_OF INTEGER[3]; 
+   v2 : ARRAY_OF INTEGER[3];
+   i: INTEGER;
+   j: INTEGER;
+   ps: FLOAT:=0;
+   n : INTEGER; 
+   m: INTEGER; 
+   isPairFound: bool := true; 
+
+BEGIN
+
+  FOR i FROM 0 TO 2 STEP 1  DO   ;
+  Write(v1[i]) 
+  END_FOR
+  i:=i+1;
+  FOR j FROM 0 TO 2 STEP 1  DO   ;
+  Write(v2[j]) 
+  END_FOR
+  j:=j+1;
+  FOR i FROM 0 TO 2 STEP 1  DO   ;
+  ps:= ps +v1[i] * v2[j]
+  END_FOR
+
+  Write(ps)
+
+  FOR i FROM 0 TO i < n STEP 1
+  DO;
+  i:=i+1
+  FOR j FROM 0 TO  j < n STEP 1
+  DO;
+  j:=j+1
+ 
+  IF (i <> j and v1[i] % v2[j] == m and ps<v1[i], v2[j]> == 0 ) THEN
+
+  Write(v1[i]) ;
+  Write(v2[j]) ;
+  isPairFound:=true;
+
+  RETURN true;
+  END_IF
+  END_FOR
+  END_FOR
+END
