@@ -15,11 +15,12 @@ BEGIN
   FOR i FROM 0 TO 2 STEP 1  DO   ;
   Write(v1[i]) 
   END_FOR
-  i:=i+1;
-  FOR j FROM 0 TO 2 STEP 1  DO   ;
-  Write(v2[j]) 
+ 
+  FOR jiFROM 0 TO 2 STEP 1  DO   ;
+  Write(v2[i]) 
   END_FOR
-  j:=j+1;
+ 
+ 
   FOR i FROM 0 TO 2 STEP 1  DO   ;
   ps:= ps +v1[i] * v2[j]
   END_FOR
@@ -28,19 +29,21 @@ BEGIN
 
   FOR i FROM 0 TO i < n STEP 1
   DO;
-  i:=i+1
+
   FOR j FROM 0 TO  j < n STEP 1
   DO;
-  j:=j+1
+   Write(v1[i]) ;
+  Write(v2[j]) ;
+  END_FOR
+  END_FOR
  
   IF (i <> j and v1[i] % v2[j] == m and ps<v1[i], v2[j]> == 0 ) THEN
 
-  Write(v1[i]) ;
-  Write(v2[j]) ;
+ 
   isPairFound:=true;
-
+   END_IF
+  
   RETURN true;
-  END_IF
-  END_FOR
-  END_FOR
+ 
+  
 END
