@@ -7,30 +7,29 @@ VAR
    j: INTEGER;
    ps: FLOAT:=0;
    n : INTEGER; 
-   m: INTEGER; 
+   
    isPairFound: bool := true; 
 
 BEGIN
 
-  
-  
-
   FOR i FROM 0 TO i < n STEP 1
   DO;
-
+ Write(v1[i]) ;
+  END_FOR
   FOR j FROM 0 TO  j < n STEP 1
   DO;
-   Write(v1[i]) ;
-  Write(v2[j]) ;
+   Write(v2[j]) ;
+  
+
   END_FOR
-  END_FOR
-  FOR i FROM 0 TO n STEP 1  DO   ;
+ 
+  FOR i FROM 0 TO n-1 STEP 1  DO   ;
   ps:= ps +v1[i] * v2[j]
   END_FOR
 
   Write(ps)
  
-  IF (i <> j and v1[i] % v2[j] == m and ps<v1[i], v2[j]> == 0 ) THEN
+  IF ( ps == 0 ) THEN
 
  
   isPairFound:=true;
